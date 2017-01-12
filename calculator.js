@@ -1,20 +1,21 @@
 // JavaScript Document
 
-//Change Display
+// Change Display
 function d(val) {
 	document.getElementById("d").value = val;
+}
+
+// Type numbers and operators
+function v(val) {
+	document.getElementById("d").value += val;
+}
+
+// Evaluate the equation
+function e() {
+	try {
+		d(eval(document.getElementById("d").value));
 	}
-	
-	//Type numvers and operators
-	function v(val) {
-		document.getElementbyId("d").value += val;
+	catch(err) {
+		d("Error");
 	}
-	 
-	 //Evaluate the equation
-	 function e() {
-		 try {
-			 d(eval(document.getElementbyId("d").value));
-			 }
-			 catch(err) {
-				 d("Error");
-		 }
+}
